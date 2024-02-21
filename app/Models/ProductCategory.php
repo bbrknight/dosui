@@ -9,6 +9,6 @@ class ProductCategory extends Model
 {
     use HasFactory;
 
-    protected $table = 'product_categorys';
+    protected $table = 'product_categories';
     protected $filter = ['category_name', 'category_description', 'category_image'];	
 }

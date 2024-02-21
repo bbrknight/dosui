@@ -9,12 +9,14 @@ class ProductController extends Controller
 {
     //
     public function index() {
-        $products = Products::all();
+        // $products = Products::all();
+        $products = Products::with('category')->get();
         return response()->json($products, 200);
     }
 
     public function show($id) {
-        $product = Products::find($id);
+        // $product = Products::find($id);
+        $product = Products::with('category')->find($id);
         return response()->json($product, 200);
     }
 
